@@ -3,6 +3,12 @@
 로맨싱 사가 3 개조 롬 「ぼくのロマサガ3」(ぼくのProto1.123)의 한국어화 xdelta 패치입니다.
 대사 전체와 메뉴·전투 문안(아이템·몬스터·기술·술법·진형·직업·인명·지명 등 표)까지 한국어입니다. 롬은 포함되어 있지 않습니다.
 
+## 다운로드
+
+- 패치(직링크): https://github.com/beck4679-alt/bokuno-rs3-ko/releases/download/v0.78/bokuno_ko_batch5z_20260908_78.xdelta
+- 예비(저장소 파일): https://github.com/beck4679-alt/bokuno-rs3-ko/raw/main/bokuno_ko_batch5z_20260908_78.xdelta
+- 원작 「ぼくのロマサガ3」 패치: https://ux.getuploader.com/romancingsaga312/download/560
+
 ## 적용
 
 1. 원본 롬 `ぼくのProto1.123.smc` (8,388,608 B, 헤더 없음)을 준비합니다.
