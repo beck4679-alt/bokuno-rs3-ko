@@ -1,13 +1,18 @@
 # ぼくのロマサガ3 (Bokuno RS3) 한국어 패치
 
 로맨싱 사가 3 개조 롬 「ぼくのロマサガ3」(ぼくのProto1.123)의 한국어화 xdelta 패치입니다.
-대사와 메뉴·전투 문안(아이템·몬스터·기술·술법·진형·직업·인명·지명 표, 기술·술법 설명문, 이벤트 목록, 마스 배틀 명령/진형/군단명, 상태창 라벨), 트레이드 UI를 한국어화합니다. 검수 후보이며 남은 확인 범위는 아래에 적었습니다. 롬은 포함되어 있지 않습니다.
+현재 배포판은 **v0.85 (검수 후보)**입니다. 롬은 포함되어 있지 않습니다.
 
 ## 다운로드
 
-- 패치(직링크): https://github.com/beck4679-alt/bokuno-rs3-ko/releases/download/v0.85/bokuno_ko_batch5z_20260908_85.xdelta
-- 예비(저장소 파일): https://github.com/beck4679-alt/bokuno-rs3-ko/raw/main/bokuno_ko_batch5z_20260908_85.xdelta
-- 먼저 받을 원작 보쿠노 패치: [「ぼくのロマサガ3」 다운로드](https://ux.getuploader.com/romancingsaga312/download/560)
+| 순서 | 받을 파일 | 다운로드 |
+|---|---|---|
+| 1 | 원작 보쿠노 패치 「ぼくのロマサガ3」 | **[원작 패치 배포처](https://ux.getuploader.com/romancingsaga312/download/560)** |
+| 2 | 한국어 패치 v0.85 | **[한국어 xdelta 다운로드](https://github.com/beck4679-alt/bokuno-rs3-ko/releases/download/v0.85/bokuno_ko_batch5z_20260908_85.xdelta)** |
+
+**적용 순서: 로맨싱 사가 3 일본판 → 원작 보쿠노 패치 → 한국어 패치**
+
+[v0.85 변경 내역](https://github.com/beck4679-alt/bokuno-rs3-ko/releases/tag/v0.85) · [한국어 패치 예비 다운로드](https://github.com/beck4679-alt/bokuno-rs3-ko/raw/main/bokuno_ko_batch5z_20260908_85.xdelta)
 
 ## 적용
 
