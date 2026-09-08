@@ -10,25 +10,69 @@
 | 1 | 원작 보쿠노 패치 「ぼくのロマサガ3」 | **[원작 패치 배포처](https://ux.getuploader.com/romancingsaga312/download/560)** |
 | 2 | 한국어 패치 v0.85 | **[한국어 xdelta 다운로드](https://github.com/beck4679-alt/bokuno-rs3-ko/releases/download/v0.85/bokuno_ko_batch5z_20260908_85.xdelta)** |
 
-**적용 순서: 로맨싱 사가 3 일본판 → 원작 보쿠노 패치 → 한국어 패치**
+**적용 순서: 로맨싱 사가 3 일본판 v1.1(헤더 없음) → 원작 보쿠노 패치(IPS) → 한국어 패치(xdelta)** — 아래 「적용」 절에 단계별 확인 방법이 있습니다.
 
 [v0.85 변경 내역](https://github.com/beck4679-alt/bokuno-rs3-ko/releases/tag/v0.85) · [한국어 패치 예비 다운로드](https://github.com/beck4679-alt/bokuno-rs3-ko/raw/main/bokuno_ko_batch5z_20260908_85.xdelta)
 
 ## 적용
 
-적용 순서: **로맨싱 사가 3 일본판 → 원작 보쿠노 패치 → 한국어 v0.85 패치**.
+적용 순서: **로맨싱 사가 3 일본판 v1.1 → 원작 보쿠노 패치(IPS) → 한국어 v0.85 패치(xdelta)**. 결과 파일마다 SHA256 을 맞춰 보면서 진행하면 실패 지점을 바로 알 수 있습니다.
 
-1. [원작 보쿠노 패치 배포처](https://ux.getuploader.com/romancingsaga312/download/560)에서 패치를 받은 뒤, 동봉 설명에 따라 로맨싱 사가 3 일본판에 먼저 적용합니다. 한국어 패치의 입력 파일은 이렇게 준비한 `ぼくのProto1.123.smc` (8,388,608 B, 헤더 없음)입니다. 파일명만 바꾸지 말고 다음 SHA256과 일치하는지 확인하세요.
-   SHA256 `4793E1422295B8C13BA81B070B941288D36BE339FF20F914652CE63CC06F2DA0`
-2. [xdelta3](https://github.com/jmacd/xdelta) 로 적용합니다.
+### 1. 원본 롬 준비 — 로맨싱 사가 3 일본판 **v1.1**, 헤더 없음
+
+- 필요한 것: 『ロマンシング サ・ガ3』 일본판 롬 **v1.1** (롬 관리 도구·에뮬레이터에서 **Rev 1** 로 표시되는 판), 카피어 헤더 없이 **4,194,304 B**.
+- 저자 안내(パッチ概要.txt): 「パッチはRomancing Saga 3 v1.1（素ロム）に当ててください。」 — v1.0 에 적용하면 롬이 만들어지긴 해도 91,410 바이트가 어긋나 한국어 패치 대상이 아닙니다(아래 SHA256 이 안 맞습니다).
+- 확인 방법(PowerShell):
+
+  ```
+  $b = [IO.File]::ReadAllBytes('Romancing Saga 3 (J).sfc')
+  $b.Length                       # 4194304 이어야 함. 4194816 이면 512 B 헤더가 붙은 파일
+  '{0:X2}' -f $b[0xFFDB]          # 01 = v1.1 (Rev 1), 00 = v1.0
+  ```
+
+  헤더(512 B)가 붙어 있으면 잘라냅니다:
+
+  ```
+  [IO.File]::WriteAllBytes('rs3_v11_noheader.sfc', $b[512..($b.Length-1)])
+  ```
+
+### 2. 원작 보쿠노 패치 적용 (IPS)
+
+1. [원작 패치 배포처](https://ux.getuploader.com/romancingsaga312/download/560)에서 `ぼくの（略更新.rar` 를 받습니다(브라우저에서 사람 확인을 거쳐 내려받는 페이지입니다).
+2. [7-Zip](https://www.7-zip.org/) 으로 풉니다(일본어 파일명이라 7-Zip 을 권장). 안에 다음이 들어 있습니다.
+   - `ぼくのProto1.123.ips` — 본편 패치 (5,551,154 B)
+   - `パッチ概要.txt`, `テキスト/00_readme.txt`, `テキスト/03_FAQ.txt`, `テキスト/02_イベント解説.txt` — 저자 설명·FAQ·이벤트 해설
+   - `【uosnes以外の環境用】/【非推奨環境用】音割れ改善パッチ1.0h.ips` — 비추천 에뮬레이터용 BGM 음할 개선 패치(4 항 참고)
+3. IPS 패처([Floating IPS(Flips)](https://github.com/Alcaro/Flips) 또는 Lunar IPS)로 `ぼくのProto1.123.ips` 를 1 에서 준비한 v1.1 헤더 없는 롬에 적용합니다. 결과는 **8,388,608 B** 로 늘어납니다. 이 파일이 `ぼくのProto1.123.smc` 입니다(파일명은 아무거나 괜찮습니다).
+4. 저자 주의: 「winipsを使う場合はパッチ適用後ipsファイルをリネームするか移動または削除するのをお勧めします。ロムと同じフォルダに同名のipsがあるとロムの改変（キャラグラ差し替え等）がうまく反映されないようです。」 — 롬과 같은 폴더에 같은 이름의 `.ips` 를 두지 마세요(에뮬레이터가 자동으로 다시 덧씌웁니다).
+5. 확인: SHA256 이 `4793E1422295B8C13BA81B070B941288D36BE339FF20F914652CE63CC06F2DA0` 이면 정상입니다.
 
    ```
-   xdelta3 -d -s ぼくのProto1.123.smc bokuno_ko_batch5z_20260908_85.xdelta bokuno_ko.smc
+   Get-FileHash -Algorithm SHA256 'ぼくのProto1.123.smc'
    ```
 
-3. 결과 SHA256 이 `FCC79B5EEBEBD8536BE4A66A63F015FA465EDED963AD933BA0E899F0E192D6D1` 이면 정상입니다.
+### 3. 한국어 패치 적용 (xdelta)
 
-누적 패치입니다. 이전 한국어판에 덧씌우지 말고 위 원본에 직접 적용하세요.
+[xdelta3](https://github.com/jmacd/xdelta) 로 2 의 결과에 적용합니다(xdelta 를 지원하는 GUI 패처를 써도 됩니다).
+
+```
+xdelta3 -d -s ぼくのProto1.123.smc bokuno_ko_batch5z_20260908_85.xdelta bokuno_ko.smc
+```
+
+결과 SHA256 이 `FCC79B5EEBEBD8536BE4A66A63F015FA465EDED963AD933BA0E899F0E192D6D1` 이면 정상입니다.
+
+누적 패치입니다. 이전 한국어판에 덧씌우지 말고 2 의 원본에 직접 적용하세요.
+
+### 4. 에뮬레이터·BGM
+
+- 저자 권장 에뮬레이터는 uosnes(20100514~20100531)입니다. 다른 에뮬레이터에서는 일부 아이콘·BGM 이 정상 재생되지 않을 수 있다고 안내합니다.
+- Snes9x 1.60 이상: 「Emulation → Hacks → Separate echo buffer from RAM(エコーバッファをRAMから分離)」 를 켜면 BGM 문제가 해결됩니다(저자 FAQ).
+- 그래도 특정 BGM 이 깨지면 rar 에 동봉된 `【非推奨環境用】音割れ改善パッチ1.0h.ips` 를 **한국어 패치를 적용한 뒤** 결과 롬에 추가로 적용하세요. 이 패치는 사운드 설정 30 바이트(0x44FEC0~0x44FF24)만 바꾸며 한국어 패치와 겹치지 않습니다. 한국어 패치보다 먼저 적용하면 2 의 SHA256 이 달라지니 순서를 지키세요.
+
+### 5. 세이브 데이터
+
+- 저자 안내: 「Verを更新する際は必ず素ROM(ヘッダ無しv1.1)を使用し、ニューゲーム(周回問わず)で始めてください。旧Verにそのまま上書きしたり、旧セーブデータのままプレイするとバグやフリーズの原因となる恐れがあります。」 — 새로 시작하는 것을 권장합니다.
+- 일본어판 세이브(SRM)를 그대로 써도 진행 자체는 되지만, 이름에 「업」「떠」 글자가 든 사용자 지정 이름은 v0.85 의 글자 배정 변경으로 호환성을 확인하지 못했습니다.
 
 ## 현재 판 (batch5z_20260908_85)
 
