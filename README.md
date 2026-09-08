@@ -7,12 +7,13 @@
 
 - 패치(직링크): https://github.com/beck4679-alt/bokuno-rs3-ko/releases/download/v0.85/bokuno_ko_batch5z_20260908_85.xdelta
 - 예비(저장소 파일): https://github.com/beck4679-alt/bokuno-rs3-ko/raw/main/bokuno_ko_batch5z_20260908_85.xdelta
-- 원작 「ぼくのロマサガ3」 패치: https://ux.getuploader.com/romancingsaga312/download/560
+- 먼저 받을 원작 보쿠노 패치: [「ぼくのロマサガ3」 다운로드](https://ux.getuploader.com/romancingsaga312/download/560)
 
 ## 적용
 
-1. 원본 롬 `ぼくのProto1.123.smc` (8,388,608 B, 헤더 없음)을 준비합니다.
-   「ぼくのロマサガ3」 패치 배포처: https://ux.getuploader.com/romancingsaga312/download/560 (원작 저자 배포, 로맨싱 사가 3 일본판 롬에 적용)
+적용 순서: **로맨싱 사가 3 일본판 → 원작 보쿠노 패치 → 한국어 v0.85 패치**.
+
+1. [원작 보쿠노 패치 배포처](https://ux.getuploader.com/romancingsaga312/download/560)에서 패치를 받은 뒤, 동봉 설명에 따라 로맨싱 사가 3 일본판에 먼저 적용합니다. 한국어 패치의 입력 파일은 이렇게 준비한 `ぼくのProto1.123.smc` (8,388,608 B, 헤더 없음)입니다. 파일명만 바꾸지 말고 다음 SHA256과 일치하는지 확인하세요.
    SHA256 `4793E1422295B8C13BA81B070B941288D36BE339FF20F914652CE63CC06F2DA0`
 2. [xdelta3](https://github.com/jmacd/xdelta) 로 적용합니다.
 
