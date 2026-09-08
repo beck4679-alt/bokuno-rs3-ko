@@ -3,6 +3,8 @@
 로맨싱 사가 3 개조 롬 「ぼくのロマサガ3」(ぼくのProto1.123)의 한국어화 xdelta 패치입니다.
 현재 배포판은 **v0.85 (검수 후보)**입니다. 롬은 포함되어 있지 않습니다.
 
+> **피드백·버그 제보는 Discord 로**: **https://discord.gg/3qQ3drmwQV** (장면·대사·창 이름과 스크린샷을 함께 올려 주세요)
+
 ## 다운로드
 
 | 순서 | 받을 파일 | 다운로드 |
@@ -80,7 +82,7 @@ xdelta3 -d -s ぼくのProto1.123.smc bokuno_ko_batch5z_20260908_85.xdelta bokun
 - 확인: 새 UI·진형 572항목과 기존 표 654항목의 ROM 되읽기 불일치 0, 에뮬레이터 이벤트 31개 관문 통과. 실제 판독기 843회·글리프 19,648행 검사 통과. 패치 복원 결과 SHA256 일치.
 - 미측정: 트레이드 자연 진입 후 전체 창 배치·상호작용, 실제 승리→성장 풍선 흐름, 기존 7×1 영지 경영 창. 「기력 업!」 표시는 엔진 루틴 직접 호출로 확인했으며 자연 전투 발생 확인과는 다릅니다.
 - 알려진 미번역/보류: 작명 화면 가나 자판(한글 입력 미지원 — 임의 음절이 뜹니다), 선택지 강조 빨강 줄(엔진 합성). 구판 세이브의 사용자 지정 이름 중 「업」「떠」가 포함된 이름은 글자 배정 변경에 따른 호환성 미확인입니다.
-- 검수 후보 단계입니다. 문제를 보시면 장면(어느 마을·누구와 대화·어느 창)과 스크린샷을 이슈로 남겨 주세요.
+- 검수 후보 단계입니다. 문제를 보시면 장면(어느 마을·누구와 대화·어느 창)과 스크린샷을 [Discord](https://discord.gg/3qQ3drmwQV) 에 올려 주세요(GitHub 이슈도 됩니다).
 
 ## 파일
 
@@ -89,3 +91,8 @@ xdelta3 -d -s ぼくのProto1.123.smc bokuno_ko_batch5z_20260908_85.xdelta bokun
 | bokuno_ko_batch5z_20260908_85.xdelta | 635,860 B | `9ee70c72f547e1af9a6ef6d9e0ae169e6df74548d4d7d1307c85fecd587188b0` |
 
 이전 판: [v0.81](https://github.com/beck4679-alt/bokuno-rs3-ko/releases/tag/v0.81), [v0.78](https://github.com/beck4679-alt/bokuno-rs3-ko/releases/tag/v0.78)
+
+## 피드백
+
+- Discord: https://discord.gg/3qQ3drmwQV
+- GitHub Issues: https://github.com/beck4679-alt/bokuno-rs3-ko/issues
