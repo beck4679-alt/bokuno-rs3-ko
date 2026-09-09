@@ -2,6 +2,8 @@
 
 로맨싱 사가 3 개조판 「ぼくのロマサガ3」(ぼくのProto1.123)를 한국어로 옮긴 xdelta 패치입니다. 패치 파일만 배포하며 롬은 포함하지 않습니다.
 
+> **피드백·버그 제보는 Discord 로**: **https://discord.gg/3qQ3drmwQV** (장면·대사·창 이름과 스크린샷을 함께 올려 주세요)
+
 | | |
 |---|---|
 | **현재 판** | **v0.94** (2026-09-09, 검수 후보) |
@@ -99,6 +101,11 @@ xdelta3 -d -s ぼくのProto1.123.smc bokuno_ko_batch5z_20260909_94.xdelta bokun
 | 결과 bokuno_ko.smc (적용 후) | 8,388,608 B | `77DAB8FE24B887B2B493B84C8D5FCFAD74046AD516F3A72FABD65C52C0ED0A6C` |
 
 저장소에도 최신 xdelta 한 벌을 두었습니다([예비 다운로드](https://github.com/beck4679-alt/bokuno-rs3-ko/raw/main/bokuno_ko_batch5z_20260909_94.xdelta)). 이전 판은 각 Release 에서 받을 수 있습니다.
+
+## 피드백
+
+- Discord: https://discord.gg/3qQ3drmwQV — 장면(어느 마을·누구와 대화·어느 창)과 스크린샷을 함께 올려 주세요.
+- GitHub Issues: https://github.com/beck4679-alt/bokuno-rs3-ko/issues
 
 ## 고지
 
