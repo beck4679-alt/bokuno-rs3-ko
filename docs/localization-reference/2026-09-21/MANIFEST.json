@@ -1,0 +1,121 @@
+{
+  "snapshotDate": "2026-09-21",
+  "purpose": "Seven core implementation files for GitHub issue #1; not a standalone release build kit.",
+  "sourceFiles": 7,
+  "seedFiles": [
+    "tools/static_state_walker_v32.mjs",
+    "tools/rs3_candidate_stream_v32.mjs",
+    "tools/rs3_shadow_dispatch_v30.mjs",
+    "tools/build_halfcell_julian_v1.mjs",
+    "tools/build_julian_rom_v1.mjs",
+    "tools/utterance_compiler_v2.mjs",
+    "runtime/build_runtime_font_from_original_bmp_v1.py"
+  ],
+  "dependencyScope": "Only seven core sources are included. Helper imports and dynamic dependencies are intentionally not bundled.",
+  "omittedLiteralRelativeImports": [
+    "tools/adaptive_authored_padding_v1.mjs",
+    "tools/autowrap_residue_audit_v2.mjs",
+    "tools/bokuno_build_input_guard_v1.mjs",
+    "tools/rs3_balloon_graph_v32r3.mjs",
+    "tools/rs3_balloon_layout_v2.mjs",
+    "tools/rs3_build_text_lineage_v1.mjs",
+    "tools/rs3_c2_text_generators_v1.mjs",
+    "tools/rs3_conditional_leading_space_v1.mjs",
+    "tools/rs3_contextual_text_stream_v1.mjs",
+    "tools/rs3_copula_hook_v1.mjs",
+    "tools/rs3_dialogue_validation_base_v1.mjs",
+    "tools/rs3_indirect_calls_v33.mjs",
+    "tools/rs3_integrated_output_engine_v1.mjs",
+    "tools/rs3_josa_hook_v1.mjs",
+    "tools/rs3_measured_geometry_v2.mjs",
+    "tools/rs3_native_choice_rules_v1.mjs",
+    "tools/rs3_native_end16_guard_v1.mjs",
+    "tools/rs3_native_ops_v30.mjs",
+    "tools/rs3_native_padding_guard_v1.mjs",
+    "tools/rs3_native_table_repairs_v1.mjs",
+    "tools/rs3_packed_flags_v1.mjs",
+    "tools/rs3_reviewed_literal_groups_v1.mjs",
+    "tools/rs3_rom_guard_v32r2.mjs",
+    "tools/rs3_runtime_text_v30.mjs",
+    "tools/rs3_soft_padding_stream_v1.mjs",
+    "tools/rs3_speech_arms_compiler_v1.mjs",
+    "tools/rs3_state_effects_v30.mjs",
+    "tools/rs3_state_file_v30.mjs",
+    "tools/rs3_state_policy_v1.mjs",
+    "tools/rs3_static_conditions_v32.mjs",
+    "tools/rs3_walk_step_budget_v1.mjs",
+    "tools/rs3_window_overlap_v1.mjs",
+    "tools/rs3_window_preset_geometry_v1.mjs"
+  ],
+  "excluded": [
+    "helper and validation modules",
+    "ROMs and patches",
+    "save states",
+    "font bitmaps and generated glyph binaries",
+    "translation ledgers and runtime JSON declarations",
+    "generated out/ and backups/ data",
+    "external ai_snes emulator core",
+    "credentials and local configuration"
+  ],
+  "files": [
+    {
+      "path": "source/BOKUNO_COMPAT_VM_PROJECT/runtime/build_runtime_font_from_original_bmp_v1.py",
+      "originalSha256": "45737d2615d645b835efc4fc2ec12215ad7b242045e64321b606ec800fdf2167",
+      "sha256": "45737d2615d645b835efc4fc2ec12215ad7b242045e64321b606ec800fdf2167",
+      "bytes": 5340,
+      "publicationChanges": []
+    },
+    {
+      "path": "source/BOKUNO_COMPAT_VM_PROJECT/tools/build_halfcell_julian_v1.mjs",
+      "originalSha256": "ee39ec4435a61c71566d096095efc9764bb7a2e9e38e33bc5b9c715170d42f58",
+      "sha256": "a46dec5745ac747528198d3f7480e4f4c2f556f073c3487852f53c5df95b3cce",
+      "bytes": 272171,
+      "publicationChanges": [
+        "Escaped one literal NUL inside a JavaScript string as \\x00; same string value, readable text file."
+      ]
+    },
+    {
+      "path": "source/BOKUNO_COMPAT_VM_PROJECT/tools/build_julian_rom_v1.mjs",
+      "originalSha256": "e45f3a393e508bf69ac96f203812f59ff8c8f30fed1b9ae4f3291aeaa4efcc9c",
+      "sha256": "cc71a5de7efa59346007f68f571d73923326ba25e30fd8bde819eb0550c7983d",
+      "bytes": 90814,
+      "publicationChanges": [
+        "Normalized UTF-8 encoding and line endings to LF."
+      ]
+    },
+    {
+      "path": "source/BOKUNO_COMPAT_VM_PROJECT/tools/rs3_candidate_stream_v32.mjs",
+      "originalSha256": "43f0b67ee31eb91d70bec858e4f1d9924c16f6ecca74dfc40a50bc710957aa62",
+      "sha256": "43f0b67ee31eb91d70bec858e4f1d9924c16f6ecca74dfc40a50bc710957aa62",
+      "bytes": 38357,
+      "publicationChanges": []
+    },
+    {
+      "path": "source/BOKUNO_COMPAT_VM_PROJECT/tools/rs3_shadow_dispatch_v30.mjs",
+      "originalSha256": "b42b869590b94603558bf72b4d703e85e62e4c7f062dd81ccb2337555ad53c22",
+      "sha256": "706b39ea04f97c84be951add7d4bf92da3f8194d033bf03b741ba7c91b43b1af",
+      "bytes": 2751,
+      "publicationChanges": [
+        "Normalized UTF-8 encoding and line endings to LF."
+      ]
+    },
+    {
+      "path": "source/BOKUNO_COMPAT_VM_PROJECT/tools/static_state_walker_v32.mjs",
+      "originalSha256": "8d1c5d719f1447c70ebb1a03f3461f495a9abeff0042cc2c45405deb136f7744",
+      "sha256": "f4ac551a81b71efd02275cac7f7590a9aaabc86f411f7e7a6a9741298b54475b",
+      "bytes": 169599,
+      "publicationChanges": [
+        "Normalized UTF-8 encoding and line endings to LF."
+      ]
+    },
+    {
+      "path": "source/BOKUNO_COMPAT_VM_PROJECT/tools/utterance_compiler_v2.mjs",
+      "originalSha256": "7e72ca3aa8a26f40c0eda0b67c1b47878f5e3b7d110aef054309be2a0f314418",
+      "sha256": "e919a512cae9dc4cec0f00bf9324ce2da153e77a7fcb34625e3caa20d61347e1",
+      "bytes": 135622,
+      "publicationChanges": [
+        "Normalized UTF-8 encoding and line endings to LF."
+      ]
+    }
+  ]
+}
