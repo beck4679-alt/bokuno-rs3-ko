@@ -1,0 +1,28 @@
+{
+  "date": "2026-09-23",
+  "source_files": [
+    {
+      "path": "source/BOKUNO_COMPAT_VM_PROJECT/tools/rs3_native_ops_v30.mjs",
+      "bytes": 11634,
+      "sha256": "2b626937e7c8029932b464206090063ca80fe109bfa9c722108de9b6579076b3",
+      "omitted_relative_imports": [
+        "./rs3_event_identity_v30.mjs"
+      ]
+    },
+    {
+      "path": "source/BOKUNO_COMPAT_VM_PROJECT/tools/rs3_runtime_text_v30.mjs",
+      "bytes": 11861,
+      "sha256": "9d94fc39bf693d69300954ca0d8811226d4f3dba92d84658cf25525c8b5230b8",
+      "omitted_relative_imports": [
+        "./rs3_rom_guard_v32r2.mjs"
+      ]
+    },
+    {
+      "path": "source/BOKUNO_COMPAT_VM_PROJECT/tools/rs3_static_conditions_v32.mjs",
+      "bytes": 2602,
+      "sha256": "9eccb07bf58383a21404f578eb7d43bbfe990e7fb92098b942f8ef702bbbeb39",
+      "omitted_relative_imports": []
+    }
+  ],
+  "publication_changes": "None; byte-for-byte source copies."
+}
