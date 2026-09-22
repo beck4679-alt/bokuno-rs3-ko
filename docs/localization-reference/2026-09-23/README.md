@@ -1,6 +1,6 @@
 # Bokuno localization: opcode and runtime-text reference
 
-Supplement dated 2026-09-23 for [issue #1](https://github.com/beck4679-alt/bokuno-rs3-ko/issues/1), containing the three requested modules from my current working sources.
+Supplement dated 2026-09-23 for [issue #1](https://github.com/beck4679-alt/bokuno-rs3-ko/issues/1), containing the three requested modules plus their two local dependency modules, copied from my current working sources (five source files in total).
 
 [Download ZIP](bokuno-localization-opcode-reference-20260923.zip) · [Browse source](source/BOKUNO_COMPAT_VM_PROJECT/tools/) · [File manifest](MANIFEST.json) · [ZIP checksum](SHA256SUMS)
 
@@ -13,6 +13,8 @@ This supplements the [seven-file reference from 2026-09-21](../2026-09-21/README
 | [rs3_native_ops_v30.mjs](source/BOKUNO_COMPAT_VM_PROJECT/tools/rs3_native_ops_v30.mjs) | Native opcode lengths, text/control classification, operand decoding, and event lookup wrappers. |
 | [rs3_runtime_text_v30.mjs](source/BOKUNO_COMPAT_VM_PROJECT/tools/rs3_runtime_text_v30.mjs) | Actor/item/table names, WRAM-backed text and numbers, native glyph-slot decoding, and explicit unresolved-state/width-assumption records. |
 | [rs3_static_conditions_v32.mjs](source/BOKUNO_COMPAT_VM_PROJECT/tools/rs3_static_conditions_v32.mjs) | Four-bit flag-domain splitting, post-gate successors, random-event alternatives, and selection-call continuations. |
+| [rs3_event_identity_v30.mjs](source/BOKUNO_COMPAT_VM_PROJECT/tools/rs3_event_identity_v30.mjs) | Native event pointer lookup and conversion between tool catalog IDs and native event IDs. |
+| [rs3_rom_guard_v32r2.mjs](source/BOKUNO_COMPAT_VM_PROJECT/tools/rs3_rom_guard_v32r2.mjs) | Exact ROM-size and SHA-256 identity checks used by the other modules. |
 
 ## Details relevant to a conservative checker
 
@@ -24,14 +26,17 @@ This supplements the [seven-file reference from 2026-09-21](../2026-09-21/README
 
 ## Dependencies and scope
 
-These three files are an implementation reference, not a standalone module bundle. To keep the upload to the requested files, the following relative imports are not included:
+All relative JavaScript imports used by these five modules are now included in the same tools directory. Their dependency chain is:
 
 - `rs3_native_ops_v30.mjs` imports `rs3_event_identity_v30.mjs`.
 - `rs3_runtime_text_v30.mjs` imports `rs3_rom_guard_v32r2.mjs` and uses the Node.js built-in `node:crypto` module.
+- `rs3_event_identity_v30.mjs` imports `rs3_rom_guard_v32r2.mjs`; both use the Node.js built-in `node:crypto` module.
 - `rs3_static_conditions_v32.mjs` has no imports, but its event helpers expect a supplied object with `rangeOfNative` (the native-ops wrapper provides it).
+
+This remains a source reference rather than a full build kit. The ROM guard retains the project's exact accepted hashes, including historical candidates; a matching hash is not a claim of gameplay coverage. A newly built Chinese ROM will need its own verified identity policy.
 
 The runtime-text model additionally needs the matching ROM, a glyph assignment, and relevant state/scratch values. ROM/table addresses and identity checks are specific to our tooling; adapting them requires verifying the target ROM layout. The models retain unhandled or approximated cases and do not constitute a complete emulator specification. They do not establish that the five helper fragments mentioned in the issue are resolved; their exact IDs/call sites are needed to compare those paths.
 
-Publication checks cover unchanged source hashes, JavaScript syntax, and ZIP integrity. No new ROM build or gameplay test was performed for this upload. No ROMs, translations, fonts, save states, or emulator binaries are included.
+Publication checks cover unchanged source hashes, JavaScript syntax, loading the five modules together with Node.js, and ZIP integrity. No new ROM build or gameplay test was performed for this upload. No ROMs, translations, fonts, save states, or emulator binaries are included.
 
 The project was developed with AI assistance, and this documentation/package was prepared with AI assistance as well.
