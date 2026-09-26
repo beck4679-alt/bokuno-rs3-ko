@@ -8,7 +8,7 @@
 |---|---|---|
 | 1 | 『ロマンシング サ・ガ3』 일본판 롬 **v1.1**, 헤더 없음 (4,194,304 바이트) | 직접 준비 |
 | 2 | 원작 보쿠노 패치 `ぼくの（略更新.rar` | [원작 패치 배포처](https://ux.getuploader.com/romancingsaga312/download/560) |
-| 3 | 한국어 패치 `bokuno_ko_v0.111.xdelta` | [Releases](https://github.com/beck4679-alt/bokuno-rs3-ko/releases/latest) |
+| 3 | 한국어 패치 `bokuno_ko_v0.112.xdelta` | [Releases](https://github.com/beck4679-alt/bokuno-rs3-ko/releases/latest) |
 
 필요한 프로그램
 
@@ -42,9 +42,9 @@
 ### A-3. 한국어 패치 적용
 
 1. **ROM file** 칸에 A-2 에서 확인한 보쿠노 롬을 넣습니다. 이번에도 「Add SNES copier header」 는 켜지 마세요.
-2. **Patch file** 칸에서 `bokuno_ko_v0.111.xdelta` 를 고릅니다.
+2. **Patch file** 칸에서 `bokuno_ko_v0.112.xdelta` 를 고릅니다.
 3. **Apply patch** 를 누르면 한국어 롬이 내려받아집니다. 파일 이름은 마음대로 바꿔도 됩니다(예: `bokuno_ko.sfc`).
-4. 확인: 한국어 롬을 **ROM file** 칸에 넣었을 때 **CRC32 `539F031E`**, SHA-1 `6F428B7EB4887431E2E09081434198FA06BC7BD6` 이면 완성입니다.
+4. 확인: 한국어 롬을 **ROM file** 칸에 넣었을 때 **CRC32 `71FED0E3`**, SHA-1 `9B82F2C53D589E828FFCCE761A079793B4743A8A` 이면 완성입니다.
 
 > 흰 상자 아래 톱니 모양 **Settings** 의 「Fix ROM checksum」 은 켜지 마세요. 켜면 결과가 달라져 위 확인 값과 맞지 않습니다.
 
@@ -64,7 +64,7 @@
 
 1. [Delta Patcher 릴리스](https://github.com/marco-calautti/DeltaPatcher/releases)에서 `windows_bin_x86_64.zip` 을 받아 압축을 풀고 실행합니다.
 2. **Original file** 오른쪽 단추로 B-1 에서 만든 보쿠노 롬을 고릅니다.
-3. **XDelta patch** 오른쪽 단추로 `bokuno_ko_v0.111.xdelta` 를 고릅니다.
+3. **XDelta patch** 오른쪽 단추로 `bokuno_ko_v0.112.xdelta` 를 고릅니다.
 4. **Apply patch** 를 누르면 「Patch successfully applied!」 가 뜨고 끝납니다.
 
 > **주의**: Delta Patcher 는 기본 설정에서 **고른 보쿠노 롬 파일 자체를 한국어 롬으로 바꿉니다.** 보쿠노 롬을 남겨 두려면 먼저 파일을 복사해 두거나, 설정 단추의 「Backup original file」 을 켜세요. 켜면 원본은 그대로 두고 이름 끝에 `PATCHED` 가 붙은 한국어 롬이 따로 생깁니다.
@@ -76,7 +76,7 @@
 | 파일 | SHA-256 |
 |---|---|
 | 보쿠노 롬 (B-1 결과) | `4793E1422295B8C13BA81B070B941288D36BE339FF20F914652CE63CC06F2DA0` |
-| 한국어 롬 (B-2 결과) | `5983AC8169517D8CE0CE0C7348D1A668A48A57C14791B8FD8256F4EC499E2942` |
+| 한국어 롬 (B-2 결과) | `BD52634E345832F6A1CBB46BA7034C844F29B8FB697A362EB8E91F186DC1FB04` |
 
 ## 잘 안 될 때
 
@@ -96,4 +96,5 @@
 - 저자 안내: 「Verを更新する際は必ず素ROM(ヘッダ無しv1.1)を使用し、ニューゲーム(周回問わず)で始めてください。」 새로 시작하는 것을 권장합니다.
 - 일본어판 세이브(SRM)를 그대로 써도 진행은 되지만, 사용자 지정 이름에 「업」「떠」가 든 경우는 v0.85 의 글자 배정 변경으로 호환성을 확인하지 못했습니다.
 - v0.104~v0.110 에서는 기존 글자의 번호가 바뀌지 않았습니다(v0.105 는 빈 번호에만 새 글자 추가).
+- v0.112 는 v0.111 과 글자 배정이 같습니다.
 - v0.111 은 대사에만 쓰는 2바이트 칸 16칸의 글자가 바뀌었습니다(기존 글자 3자 번호 이동·6자 제외·7자 추가). 이름 자판이 쓰는 1바이트 칸은 v0.110 과 같습니다.
