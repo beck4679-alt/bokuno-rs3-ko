@@ -4,6 +4,7 @@
 
 | 판 | 빌드 | 날짜 | 요약 |
 |---|---|---|---|
+| [v0.111](https://github.com/beck4679-alt/bokuno-rs3-ko/releases/tag/v0.111) | translation_qa_20260926_v40e | 2026-09-26 | 가변폭 갈무리 글꼴, 번역 전면 손질(약 3,300행)·주인공 말투 정리 |
 | [v0.110](https://github.com/beck4679-alt/bokuno-rs3-ko/releases/tag/v0.110) | forced_scroll_followup_20260924_v37b | 2026-09-24 | 구시가 대사·불필요한 개행 63행 수정, 공유 대사 재검사 |
 | [v0.109](https://github.com/beck4679-alt/bokuno-rs3-ko/releases/tag/v0.109) | forced_scroll_20260923_v36e | 2026-09-23 | 대사 추가 스크롤 58묶음·이름 뒤 개행·좁은 창 중복 개행 수리, 공유 말풍선 영향 검사 |
 | [v0.108](https://github.com/beck4679-alt/bokuno-rs3-ko/releases/tag/v0.108) | josa_20260922_v35 | 2026-09-22 | 조사 자동 선택 확대(추가 아이템·전투·트레이드·군단전)·합성술 목록 괴문자·전투 메시지 이름 뒤 빈칸 수리 |
