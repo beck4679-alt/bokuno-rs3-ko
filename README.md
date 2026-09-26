@@ -2,6 +2,8 @@
 
 로맨싱 사가 3 개조판 **「ぼくのロマサガ3」(ぼくのProto1.123)** 의 한국어 패치입니다.
 
+> **피드백·버그 제보는 Discord 로**: **https://discord.gg/3qQ3drmwQV** (장면·대사·창 이름과 스크린샷을 함께 올려 주세요)
+
 **[최신 패치 다운로드](https://github.com/beck4679-alt/bokuno-rs3-ko/releases/download/v0.112/bokuno_ko_v0.112.xdelta)** · [설치 가이드](docs/INSTALL.md) · [변경 내역](docs/CHANGELOG.md)
 
 > **v0.112 · 2026.09.26** — 문장 끝 부호나 끝말이 혼자 다음 줄로 떨어지던 대사를 고쳤습니다. 현재 검수 진행 중입니다.
