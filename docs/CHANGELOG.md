@@ -4,6 +4,7 @@
 
 | 판 | 빌드 | 날짜 | 요약 |
 |---|---|---|---|
+| [v0.113](https://github.com/beck4679-alt/bokuno-rs3-ko/releases/tag/v0.113) | discordqc_20260927_v41a | 2026-09-27 | 디스코드 검수 제보 5건(전투 훔치기 문구·상태창 내성·수행 NPC 대사·트레이드 금액과 경매 회사 이름·토너먼트 순번 표지) |
 | [v0.112](https://github.com/beck4679-alt/bokuno-rs3-ko/releases/tag/v0.112) | translation_qa_20260926_v40h | 2026-09-26 | 줄 넘김 수리 9곳(문장 끝 부호·끝말 고아 행, 공유 행 두 창 확인) |
 | [v0.111](https://github.com/beck4679-alt/bokuno-rs3-ko/releases/tag/v0.111) | translation_qa_20260926_v40e | 2026-09-26 | 가변폭 갈무리 글꼴, 번역 전면 손질(약 3,300행)·주인공 말투 정리 |
 | [v0.110](https://github.com/beck4679-alt/bokuno-rs3-ko/releases/tag/v0.110) | forced_scroll_followup_20260924_v37b | 2026-09-24 | 구시가 대사·불필요한 개행 63행 수정, 공유 대사 재검사 |
