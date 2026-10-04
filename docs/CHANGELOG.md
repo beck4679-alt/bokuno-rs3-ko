@@ -4,6 +4,7 @@
 
 | 판 | 빌드 | 날짜 | 요약 |
 |---|---|---|---|
+| [v0.116](https://github.com/beck4679-alt/bokuno-rs3-ko/releases/tag/v0.116) | discordqc_20261005_v44b | 2026-10-05 | 동료 가입 뒤 그림·LP 깨짐(2회차 엘렌 등) 수리 — 한국어 패치 임시 메모리와 확장 대기 동료 목록 겹침(v0.78~v0.115), 이전 판 세이브 불러오기 자동 정리 |
 | [v0.115](https://github.com/beck4679-alt/bokuno-rs3-ko/releases/tag/v0.115) | discordqc_20261004_v43b | 2026-10-04 | 디스코드 제보 수리 — 아이템 이름 뒤 조사(빛모래 로브), 군단전 이름 표 확장 글자(방벽파진·뭉그족·철벽), 이름 뒤 일본어 부호 3곳, 영지 경영 잔금 「만」 |
 | [v0.114](https://github.com/beck4679-alt/bokuno-rs3-ko/releases/tag/v0.114) | discordqc_20260929_v42a | 2026-09-29 | 괴문자(연결 안 된 원문) 전수 수리 — 디스코드 제보 4곳 포함 새 줄 27·연결 위치 4, 배틀 시뮬레이터 안내·휴식/경매 선택지·끝 마침표 |
 | [v0.113](https://github.com/beck4679-alt/bokuno-rs3-ko/releases/tag/v0.113) | discordqc_20260927_v41a | 2026-09-27 | 디스코드 검수 제보 5건(전투 훔치기 문구·상태창 내성·수행 NPC 대사·트레이드 금액과 경매 회사 이름·토너먼트 순번 표지) |
